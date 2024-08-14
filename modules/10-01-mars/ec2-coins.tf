@@ -1,7 +1,7 @@
 resource "hcloud_server" "mars_coin" {
   count       = 1
   name        = "${var.region_code}-${var.stand_name}-coin-${format("%02d", count.index + 1)}"
-  server_type = "cx52"
+  server_type = "cx42"
   image       = "ubuntu-24.04"
   location    = "fsn1"
   ssh_keys = [
